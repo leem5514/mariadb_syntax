@@ -31,7 +31,7 @@ select * from author where id = 1;
 select * from author where id > 2 && name = 'oh';
 
 
--- 특정 컬럼만으 조회할 때
+-- 특정 컬럼만으로 조회할 때
 select name, email from author where id = 3;
 
 -- 중복 제거하고 조회하기
@@ -48,4 +48,15 @@ select * from post order by title, id desc;
 
 -- limit number : 특정숫자 결과값 개수 제한
 select * from author order by id desc limit 1;
+
+-- alias(별칭)을 이용한  select : as 키워드 사용
+select name as 이름, email as 이메일 from author;
+select a.name as 이름, a.email as 이메일 from author as a;
+
+-- null을 조회 조건으로
+select * from post where author_id is null;
+select * from post where author_id is not null;
+
+
+
 
