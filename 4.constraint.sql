@@ -6,7 +6,7 @@ alter table author modify column id bigint auto_increment;
 alter table post modify column id bigint auto_increment;
 
 -- author.id에 제약조건 추가시 fk으로 인해 문제 발생시 fk 먼저 제거 이후 author.id에 제약 조건 추가
-select * from information_schema.key_column_usage where table_name = 'post';
+    select * from information_schema.key_column_usage where table_name = 'post';
 -- 삭제
 alter table post drop foreign key post_ibfk_1;
 -- 삭제된 제약조건 추가

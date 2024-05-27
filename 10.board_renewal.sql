@@ -23,7 +23,7 @@ create table author_address (
 	city varchar(255),
 	street varchar(255),
 	author_id int not null,
-	FOREIGN KEY (author_id) REFERENCES author(id) on delete cascade,
+	 
 	primary key(id),
 	unique(author_id)
 );
